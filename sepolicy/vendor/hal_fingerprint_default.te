@@ -21,6 +21,9 @@ allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default sysfs_graphics:file rw_file_perms;
 allow hal_fingerprint_default sysfs_graphics:dir r_dir_perms;
 
+# Allow hal_fingerprint_default to add and find fpc_extension_service
+allow hal_fingerprint_default fpc_extension_service:hwservice_manager { add find };
+
 r_dir_file(hal_fingerprint_default, sysfs_leds)
 
 set_prop(hal_fingerprint_default, fingerprint_prop)
