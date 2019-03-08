@@ -1,0 +1,2 @@
+# Allow hal_nfc_default to add and find hal_nxpnfc_hwservice
+allow hal_nfc_default hal_nxpnfc_hwservice:hwservice_manager { find add };
