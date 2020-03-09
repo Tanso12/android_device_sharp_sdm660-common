@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
+
 BOARD_VENDOR := sharp
+
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 COMMON_PATH := device/sharp/sdm660-common
 
