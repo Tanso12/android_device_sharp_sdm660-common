@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_kernel_sharp_sdm660",
+    "target_path": "kernel/sharp/sdm660"
+  }
+]
