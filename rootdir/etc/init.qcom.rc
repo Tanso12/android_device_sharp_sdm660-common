@@ -750,6 +750,7 @@ on post-fs-data
 
     # NFC vendor data
     mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
 
     # Required by FingerPrint Cards (FPC) via init so we don't need to give qseecomd or fingerprintd permissions to create them
     mkdir /data/vendor/fpc 0700 system system
