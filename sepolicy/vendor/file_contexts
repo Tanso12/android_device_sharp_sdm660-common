@@ -4,6 +4,7 @@
 
 # Fingerprint
 /dev/elan_fp                               u:object_r:sysfs_fingerprint:s0
+/sys/devices/soc/soc:fpc1020(/.*)?                               u:object_r:sysfs_fingerprint:s0
 
 # Partitions (A/B)
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/cda_[ab]                        u:object_r:custom_ab_block_device:s0
@@ -24,3 +25,4 @@
 
 # HALs
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.sharp_sdm660    u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fpc@2\.1-service                 u:object_r:hal_fingerprint_default_exec:s0
