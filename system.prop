@@ -1,16 +1,8 @@
-# system.prop for nokia_sdm660
+# system.prop for sharp_sdm660
 #
 
 # Audio
-audio.offload.min.duration.secs=30
-audio.offload.video=false
-audio.deep_buffer.media=true
-ro.af.client_heap_size_kbyte=7168
-ro.vendor.audio.sdk.fluencetype=fluence
-persist.sys.smartamp=1
-persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicerec=false
-persist.vendor.audio.fluence.speaker=true
+ro.vendor.qti.va_aosp.support=1
 
 # Bluetooth
 bt.max.hfpclient.connections=1
@@ -27,17 +19,6 @@ vendor.bluetooth.soc=cherokee
 # CABL
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
-
-# Camera
-camera.aux.packagelist=com.hmdglobal.camera2,cameratest,com.evenwell.fqc,com.tools.alt,com.siui.android.camera
-camera.hal1.packagelist=com.dw.btime
-persist.camera.awbdefine=1
-persist.camera.debug_img_exif=1
-persist.camera.debug_img_exif=1
-persist.camera.privapp.list=org.codeaurora.snapcam
-persist.vendor.camera.preview.ubwc=0
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
 # Charging
 persist.chg.max_volt_mv=9000
@@ -108,6 +89,10 @@ vendor.vidc.dec.enable.downscalar=0
 vendor.vidc.enc.disable_bframes=1
 vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.target_support_bframe=1
+
+# NFC
+ro.nfc.port=I2C
+persist.nfc.smartcard.config=SIM1
 
 # Power
 persist.env.fastdorm.enabled=true

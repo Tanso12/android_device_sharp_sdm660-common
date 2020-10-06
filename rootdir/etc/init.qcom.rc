@@ -47,6 +47,9 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    #for sensor config read
+    chown system system /proc/dt_info
+    chmod 0664 /proc/dt_info
 
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
@@ -1373,11 +1376,3 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
-
-# Override the AOSP sensor HAL service definition to add input group access
-service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
-    class hal
-    user system
-    group system input uhid wakelock
-    capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10

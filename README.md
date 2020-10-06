@@ -1,1 +1,1 @@
-##### Common Tree for Nokia SDM660 Based Devices
+##### Common Tree for Sharp SDM660 Based Devices
