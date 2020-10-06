@@ -18,9 +18,9 @@
 set -e
 
 DEVICE_COMMON=sdm660-common
-VENDOR=nokia
+VENDOR=sharp
 
-INITIAL_COPYRIGHT_YEAR=2019
+INITIAL_COPYRIGHT_YEAR=2020
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -39,22 +39,10 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and common guards
-write_headers "DRG PL2"
+write_headers "SS2"
 
 # The common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # We are done with common
-write_footers
-
-# Initialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
-
-# Copyright headers and guards
-write_headers
-
-# The device blobs
-write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt true
-
-# We are done with device
 write_footers

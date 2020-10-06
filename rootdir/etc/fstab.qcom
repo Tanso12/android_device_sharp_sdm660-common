@@ -7,7 +7,7 @@
 
 # A/B fstab.qcom variant
 #<src>                                   <mnt_point>        <type> <mnt_flags and options>                          <fs_mgr_flags>
-/dev/block/bootdevice/by-name/system     /                  ext4   ro,barrier=1,discard                             wait,slotselect,verify
+/dev/block/bootdevice/by-name/system     /                  ext4   ro,barrier=1,discard                             wait,slotselect
 /dev/block/bootdevice/by-name/userdata   /data              ext4   noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard,lazytime,errors=panic   wait,check,latemount,formattable,fileencryption=ice,quota,reservedsize=128M
 /devices/soc/c084000.sdhci/mmc_host*     /storage/sdcard1   vfat   nosuid,nodev                                     wait,voldmanaged=sdcard1:auto
 /dev/block/bootdevice/by-name/misc       /misc              emmc   defaults                                         defaults
@@ -18,4 +18,3 @@
 
 #usb otg auto mount, 80-NF283-1_D, page 200, mount point: /mnt/media_rw/
 /devices/*/xhci-hcd.0.auto*              auto               auto   defaults                                         voldmanaged=usb:auto
-

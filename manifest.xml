@@ -406,29 +406,20 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.fih.hardware.ifaa</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IIfaa</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.fih.hardware.iface</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IIface</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.focaltech.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFocalFingerprintService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.goodix.hardware.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IGoodixBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -777,15 +768,6 @@
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.lineage.livedisplay</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IPictureAdjustment</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
