@@ -182,6 +182,7 @@ vendor.power.pasr.enabled=true
 
 # Radio
 keyguard.no_require_sim=true
+persist.radio.multisim.config=dsds
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
@@ -192,6 +193,7 @@ ro.carrier=unknown
 ro.com.android.dataroaming=true
 ro.telephony.iwlan_operation_mode=legacy
 ro.vendor.qti.va_aosp.support=1
+ro.telephony.default_network=22,22
 
 # Sensors
 ro.vendor.sdk.sensors.gestures=false
